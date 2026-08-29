@@ -1,0 +1,93 @@
+{
+  "_lee": "CATALOGO CENTRAL DE INTERACTIVE SOLUTIONS. Esta es la unica copia que hay que editar cuando cambia un precio, una descripcion o entra un producto nuevo. Todas las paginas de la compania lo leen de https://interactivesolutions.app/productos.json y se actualizan solas. Cada pagina lleva ademas una copia de respaldo escrita en su propio HTML: si este archivo no carga, se ve la copia vieja en vez de una lista vacia.",
+  "version": 1,
+  "actualizado": "2026-08-29",
+  "categorias": [
+    { "id": "productividad", "es": "Productividad", "en": "Productivity", "pt": "Produtividade" },
+    { "id": "organizacion",  "es": "Organización",  "en": "Organization", "pt": "Organização" },
+    { "id": "navegador",     "es": "Navegador",     "en": "Browser",      "pt": "Navegador" },
+    { "id": "utilidad",      "es": "Utilidad",      "en": "Utility",      "pt": "Utilitário" }
+  ],
+  "productos": [
+    {
+      "id": "video-downloader",
+      "nombre": "Ninja Video Downloader",
+      "categoria": "utilidad",
+      "icono": "https://interactivesolutions.app/img/vd.png",
+      "web": "https://nvd.interactivesolutions.app/",
+      "precio": "$19.99",
+      "periodo": "",
+      "insignia": { "es": "Licencia de por vida", "en": "Lifetime license", "pt": "Licença vitalícia" },
+      "accion": { "es": "Ver producto", "en": "View product", "pt": "Ver produto" },
+      "desc": {
+        "es": "Descarga y convierte video de casi cualquier sitio.",
+        "en": "Download and convert video from almost any site.",
+        "pt": "Baixe e converta vídeo de quase qualquer site."
+      }
+    },
+    {
+      "id": "browser-control",
+      "nombre": "Ninja Browser Control",
+      "categoria": "navegador",
+      "icono": "https://interactivesolutions.app/img/browser.png",
+      "web": "https://ninjatools-is.lemonsqueezy.com/checkout/buy/e2de7ddd-ae9f-4cac-9320-8928945833aa",
+      "precio": "$4.99",
+      "periodo": { "es": "/ mes", "en": "/ month", "pt": "/ mês" },
+      "insignia": null,
+      "accion": { "es": "Comprar", "en": "Buy", "pt": "Comprar" },
+      "desc": {
+        "es": "Privacidad, red, herramientas y productividad en tu navegador.",
+        "en": "Privacy, network, tools and productivity in your browser.",
+        "pt": "Privacidade, rede, ferramentas e produtividade no seu navegador."
+      }
+    },
+    {
+      "id": "timer-control",
+      "nombre": "Ninja Timer Control",
+      "categoria": "productividad",
+      "icono": "https://interactivesolutions.app/img/timer.png",
+      "web": "https://apps.microsoft.com/detail/9PJ2GV59WPXH",
+      "precio": "$0.99",
+      "periodo": { "es": "/ mes", "en": "/ month", "pt": "/ mês" },
+      "insignia": { "es": "1 mes gratis", "en": "1 month free", "pt": "1 mês grátis" },
+      "accion": { "es": "Ver en Microsoft Store", "en": "Get it from Microsoft Store", "pt": "Ver na Microsoft Store" },
+      "desc": {
+        "es": "Temporizador y automatización de tareas.",
+        "en": "Timer and task automation.",
+        "pt": "Timer e automação de tarefas."
+      }
+    },
+    {
+      "id": "reminder-control",
+      "nombre": "Ninja Reminder Control",
+      "categoria": "organizacion",
+      "icono": "https://interactivesolutions.app/img/reminder.png",
+      "web": "https://apps.microsoft.com/detail/9PH6Z4J23V5F",
+      "precio": "$2.99",
+      "periodo": "",
+      "insignia": { "es": "1 mes gratis", "en": "1 month free", "pt": "1 mês grátis" },
+      "accion": { "es": "Ver en Microsoft Store", "en": "Get it from Microsoft Store", "pt": "Ver na Microsoft Store" },
+      "desc": {
+        "es": "Recordatorios y calendario.",
+        "en": "Reminders and calendar.",
+        "pt": "Lembretes e calendário."
+      }
+    },
+    {
+      "id": "icon-tray",
+      "nombre": "Ninja Icon Tray",
+      "categoria": "utilidad",
+      "icono": "https://interactivesolutions.app/img/icontray.png",
+      "web": "https://apps.microsoft.com/detail/9NGP9QC57RS7",
+      "precio": null,
+      "periodo": "",
+      "insignia": { "es": "Gratis", "en": "Free", "pt": "Grátis" },
+      "accion": { "es": "Ver en Microsoft Store", "en": "Get it from Microsoft Store", "pt": "Ver na Microsoft Store" },
+      "desc": {
+        "es": "Recupera ventanas ocultas.",
+        "en": "Recover hidden windows.",
+        "pt": "Recupere janelas ocultas."
+      }
+    }
+  ]
+}
