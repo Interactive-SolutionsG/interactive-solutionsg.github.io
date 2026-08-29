@@ -4,7 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Termos de uso do site &middot; Interactive Solutions</title>
-<link rel="icon" type="image/png" href="../img/firma.png">
+<!-- Dos enlaces y ninguno sobra. El SVG es el bueno: su placa cambia de color con
+     prefers-color-scheme, azul de marca en un navegador claro y celeste en uno oscuro,
+     porque el azul de marca contra la barra oscura de Chrome da 1.8:1 y el cuadrado se
+     funde. El PNG va delante de respaldo, para el que no sepa leer iconos SVG.
+
+     Van como ARCHIVO y no incrustados a proposito: estos documentos pesan 6 KB, y meter
+     el SVG dentro de cada uno los doblaria. Asi los seis comparten el mismo archivo y el
+     navegador lo descarga una sola vez.
+
+     Antes aqui estaba img/firma.png, que mide 556x100: metida en un cuadro de 16x16 salia
+     un borron, y al ser blanca sobre transparente desaparecia en las pestanas claras. -->
+<link rel="icon" type="image/png" sizes="64x64" href="../img/isicon.png">
+<link rel="icon" type="image/svg+xml" href="../img/isicon.svg">
 <style>
         :root {
             --bg: oklch(0.17 0.012 258); --panel: oklch(0.205 0.013 258); --inset: oklch(0.135 0.012 258);
@@ -23,6 +35,12 @@
         .bar { position: sticky; top: 0; z-index: 10; background: var(--panel); border-bottom: 1px solid var(--border-soft); }
         .bar__in { padding: 7px 26px; display: flex; align-items: center; gap: 16px; }
         .brand { display: inline-flex; align-items: center; gap: 11px; color: var(--ink); font-weight: 600; font-size: 14.5px; letter-spacing: 0.005em; }
+        /* El monograma va sin placa: la barra ya es oscura, asi que el cuadro de
+           color no aporta nada y solo lo emparedaria contra el panel. Blanco, del
+           mismo tono que el texto que lleva al lado: marca y nombre leen como una
+           sola pieza. El `gap` de .brand ya existia, es el hueco que dejo el icono
+           de firma que se quito de aqui. */
+        .brand__ico { width: 21px; height: 21px; display: block; flex: none; }
         .langs { margin-left: auto; display: flex; align-items: center; gap: 13px; font-size: 13px; }
         .langs a { color: var(--ink-3); text-decoration: none; }
         .langs a:hover { color: var(--accent); }
@@ -50,6 +68,7 @@
     <header class="bar">
         <div class="bar__in">
             <span class="brand">
+                <img class="brand__ico" src="../img/ismarca.png" alt="" width="21" height="21" decoding="async">
                 Interactive Solutions
             </span>
             <nav class="langs">
