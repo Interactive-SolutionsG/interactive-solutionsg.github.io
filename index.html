@@ -1560,6 +1560,32 @@
             document.addEventListener("click", alClic, true);
             window.addEventListener("scroll", cerrarTodas, { passive: true });
         }
+        /*
+            AL TACTO, TOCAR UNA TARJETA LA ABRE — SIEMPRE, sin pasar por el boton.
+
+            Antes esto solo funcionaba despues de pulsar "Ver nuestros productos", porque el
+            manejador se registraba alli. Y como el despliegue por :hover ya no existe en
+            pantallas tactiles, sin el boton no habia forma de abrir una tarjeta.
+
+            Con raton no se hace nada: alli manda el :hover, y la cinta ya se para sola al
+            pasar por encima.
+        */
+        var conRaton = function () {
+            // Se pregunta en el momento, no al cargar: vale tambien para una tableta a la
+            // que se le enchufa un raton a mitad de sesion.
+            return !!(window.matchMedia && window.matchMedia("(hover: hover) and (pointer: fine)").matches);
+        };
+        document.addEventListener("click", function (e) {
+            if (conRaton()) return;
+            var card = e.target.closest ? e.target.closest("#mqProds .sc-card") : null;
+            if (!card) return;              // cerrar fuera ya lo hace alClic cuando toca
+            var n = mqT.querySelectorAll(".abierta");
+            for (var i = 0; i < n.length; i++) if (n[i] !== card) n[i].classList.remove("abierta");
+            card.classList.add("abierta");
+            congelada = true;
+            armarCierres();                 // para que el scroll y el toque fuera la cierren
+        }, true);
+
         var irAProds = document.querySelector('.port .acciones a[href="#productos"]');
         if (irAProds) irAProds.addEventListener("click", function () {
             cerrarTodas();
